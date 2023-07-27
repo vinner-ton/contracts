@@ -1,0 +1,18 @@
+// https://ton.org/docs/#/overviews/TL-B
+// base types defined in https://github.com/ton-blockchain/ton/blob/master/crypto/block/block.tlb
+
+// storage (according to save_data() contract method)
+
+storage#_ owner_address:MsgAddress = Storage
+
+// ops
+
+// echo query_id:uint64 = InternalMsgBody
+
+// bet query_id:uint64 user_address:MsgAddress = InternalMsgBody
+
+deposit query_id:uint64 = InternalMsgBody
+
+withdraw query_id:uint64 withdraw_amount:Grams = InternalMsgBody
+
+transfer_ownership query_id:uint64 new_owner_address:MsgAddress = InternalMsgBody
